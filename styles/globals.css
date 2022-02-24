@@ -1,9 +1,25 @@
 html,
 body {
+  /*dark mode*/
+  --background-dark: #1d2125;
+  --primary-dark: #f4f4f5;
+  --secondary-dark: #e5a531;
+  --caption-dark: #818387;
+  /*light mode*/
+  --background-light: var(--primary-dark);
+  --primary-light: #151530;
+  --secondary-light: #395c91;
+  --caption-light: #818387;
+  /*develope*/
+  --border: 1px solid magenta;
+
   padding: 0;
   margin: 0;
-  background-color: #454a53;
-  font-family: Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  background-color: var(--background-dark);
+  color: #fff;
+  font-family: 'Raleway', Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif, 'Major Mono Display';
 }
 
 a {
