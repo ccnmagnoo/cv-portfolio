@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import BigSwitch from '../components/bigSwitch/BigSwitch';
 import st from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
@@ -15,13 +16,11 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <header className={st.header}>
-        <div>button01</div>
-        <div>button02</div>
-        <div>button03</div>
-      </header>
+      <header className={st.header}>header</header>
 
-      <main className={st.main}>main</main>
+      <main className={st.main}>
+        <BigSwitch />
+      </main>
 
       <footer className={st.footer}>footer</footer>
     </section>

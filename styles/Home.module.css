@@ -50,3 +50,50 @@
   flex-wrap: wrap;
   max-width: 800px;
 }
+
+/*bigSwitch*/
+.bigSwitch {
+  --switchW: 340px;
+  --switchH: 240px;
+  --leverGap: 40px;
+  --leverSize: calc(var(--switchH) + var(--leverGap));
+  border-radius: 1000px;
+  position: relative;
+  width: var(--switchW);
+  height: var(--switchH);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset -3px -3px 6px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+}
+.bigSwitch:hover {
+  box-shadow: inset 0px 0px 6px 12px rgba(0, 0, 0, 0.2),
+    0 0 12px 12px rgba(255, 255, 255, 0.1);
+}
+
+.bigSwitch .lever {
+  border-radius: 1000px;
+  background-color: black;
+  width: var(--leverSize);
+  height: var(--leverSize);
+  position: absolute;
+  left: calc(-1 * var(--leverGap));
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+.bigSwitch:hover .lever {
+  left: calc(var(--switchW) - var(--switchH));
+}
+
+.bigSwitch .card {
+  background-color: black;
+  position: absolute;
+  display: flex;
+  right: calc(-1 * var(--switchW) / 2.5);
+  width: calc(var(--leverSize) * 0.8);
+  height: calc(var(--leverSize) * 0.5);
+}
