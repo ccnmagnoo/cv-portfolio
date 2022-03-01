@@ -4,6 +4,16 @@
   width: 100vw;
   height: 100vh;
 }
+
+.dark {
+  background-color: var(--background-dark);
+  color: var(--primary-dark);
+}
+.light {
+  background-color: var(--background-light);
+  color: var(--primary-light);
+}
+
 .header {
   /*border: var(--border);*/
   display: flex;
@@ -15,7 +25,6 @@
   width: 100%;
   padding: 5px;
 }
-
 .main {
   /*border: var(--border);*/
   min-height: 80vh;
@@ -25,8 +34,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
+}
+
+.container.dark .main {
+  box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container.light .main {
+  box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.05);
 }
 
 .footer {
@@ -52,9 +68,9 @@
 }
 
 /*bigSwitch*/
-.bigSwitch {
-  --switchW: 340px;
-  --switchH: 240px;
+.container .bigSwitch {
+  --switchW: 300px;
+  --switchH: 200px;
   --leverGap: 40px;
   --leverSize: calc(var(--switchH) + var(--leverGap));
   border-radius: 1000px;
@@ -67,33 +83,58 @@
   box-shadow: inset -3px -3px 6px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
 }
-.bigSwitch:hover {
+
+.container .bigSwitch:hover {
   box-shadow: inset 0px 0px 6px 12px rgba(0, 0, 0, 0.2),
-    0 0 12px 12px rgba(255, 255, 255, 0.1);
+    0 0 3px 3px rgba(255, 255, 255, 0.1);
 }
 
-.bigSwitch .lever {
+.container .bigSwitch .lever {
   border-radius: 1000px;
-  background-color: black;
   width: var(--leverSize);
   height: var(--leverSize);
   position: absolute;
-  left: calc(-1 * var(--leverGap));
   transition: all 0.4s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.5;
+  opacity: 1;
 }
-.bigSwitch:hover .lever {
+/*🌒 dark mode*/
+.container.dark .bigSwitch .lever {
+  background-color: black;
+  left: calc(-1 * var(--leverGap));
+}
+/*🌞 light mode*/
+.container.light .bigSwitch .lever {
+  background-color: var(--secondary-light);
   left: calc(var(--switchW) - var(--switchH));
 }
 
-.bigSwitch .card {
-  background-color: black;
+.container .bigSwitch .lever::after {
+  --wide: 10px;
+  border: var(--border);
+  border-radius: 1000px;
+  background-color: white;
+  width: calc(var(--leverSize) + var(--wide));
+  height: calc(var(--leverSize) + var(--wide));
+}
+
+.container .bigSwitch .card {
   position: absolute;
   display: flex;
-  right: calc(-1 * var(--switchW) / 2.5);
-  width: calc(var(--leverSize) * 0.8);
+  align-self: center;
+  width: calc(var(--leverSize) * 0.9);
   height: calc(var(--leverSize) * 0.5);
+  transition: all 0.5 ease-in-out;
+}
+
+.container.dark .bigSwitch .card {
+  background-color: black;
+  transform: translateX(90%);
+}
+
+.container.light .bigSwitch .card {
+  background-color: var(--secondary-light);
+  transform: translateX(-90%);
 }

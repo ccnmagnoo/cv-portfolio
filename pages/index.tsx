@@ -1,12 +1,12 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import BigSwitch from '../components/bigSwitch/BigSwitch';
+import BigSwitch from '../components/bigSwitch/bigSwitch';
 import st from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
-    <section className={st.container}>
+    <section className={`${st.container} ${st.light}`}>
       <Head>
         <title>Carlos&apos;s Profile</title>
         <meta name='description' content='porfolio with Carlos Campos profile' />
