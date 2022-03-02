@@ -6,7 +6,7 @@ import st from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
-    <section className={`${st.container} ${st.light}`}>
+    <section className={`${st.container} ${st.dark}`}>
       <Head>
         <title>Carlos&apos;s Profile</title>
         <meta name='description' content='porfolio with Carlos Campos profile' />

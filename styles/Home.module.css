@@ -67,13 +67,14 @@
   max-width: 800px;
 }
 
-/*bigSwitch*/
+/*bigSwitch base */
 .container .bigSwitch {
   --switchW: 300px;
   --switchH: 200px;
   --leverGap: 40px;
   --leverSize: calc(var(--switchH) + var(--leverGap));
   border-radius: 1000px;
+  cursor: pointer;
   position: relative;
   width: var(--switchW);
   height: var(--switchH);
@@ -82,6 +83,7 @@
   justify-content: center;
   box-shadow: inset -3px -3px 6px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
 
 .container .bigSwitch:hover {
@@ -89,6 +91,7 @@
     0 0 3px 3px rgba(255, 255, 255, 0.1);
 }
 
+/*BS Lever*/
 .container .bigSwitch .lever {
   border-radius: 1000px;
   width: var(--leverSize);
@@ -98,7 +101,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
 }
 /*🌒 dark mode*/
 .container.dark .bigSwitch .lever {
@@ -112,13 +114,33 @@
 }
 
 .container .bigSwitch .lever::after {
-  --wide: 10px;
-  border: var(--border);
+  content: '';
+  --border-width: 15px;
+  position: absolute;
   border-radius: 1000px;
-  background-color: white;
-  width: calc(var(--leverSize) + var(--wide));
-  height: calc(var(--leverSize) + var(--wide));
+  width: calc(var(--leverSize) + var(--border-width));
+  height: calc(var(--leverSize) + var(--border-width));
+  z-index: -1;
+  animation: 5s leverRotate linear infinite;
 }
+
+.container.dark .bigSwitch .lever::after {
+  background-image: linear-gradient(to right, var(--secondary-dark), rgb(241, 77, 12));
+}
+.container.light .bigSwitch .lever::after {
+  background-image: linear-gradient(to right, rgb(85, 174, 233), rgb(133, 139, 187));
+}
+
+@keyframes leverRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* BS Card */
 
 .container .bigSwitch .card {
   position: absolute;
