@@ -5,11 +5,15 @@ body {
   --primary-dark: #f4f4f5;
   --secondary-dark: #e5a531;
   --caption-dark: #818387;
+  --decoA-dark: #e5a531;
+  --decoB-dark: rgb(241, 77, 12);
   /*light mode*/
   --background-light: var(--primary-dark);
   --primary-light: #151530;
   --secondary-light: #395c91;
   --caption-light: #818387;
+  --decoA-light: rgb(85, 174, 233);
+  --decoB-light: rgb(133, 139, 187);
   /*developer assist*/
   --border: 1px solid magenta;
 

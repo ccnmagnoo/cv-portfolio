@@ -73,6 +73,7 @@
   --switchH: 200px;
   --leverGap: 40px;
   --leverSize: calc(var(--switchH) + var(--leverGap));
+  color: var(--primary-dark);
   border-radius: 1000px;
   cursor: pointer;
   position: relative;
@@ -91,7 +92,7 @@
     0 0 3px 3px rgba(255, 255, 255, 0.1);
 }
 
-/*BS Lever*/
+/*BS Lever 🏒*/
 .container .bigSwitch .lever {
   border-radius: 1000px;
   width: var(--leverSize);
@@ -115,7 +116,7 @@
 
 .container .bigSwitch .lever::after {
   content: '';
-  --border-width: 15px;
+  --border-width: 16px;
   position: absolute;
   border-radius: 1000px;
   width: calc(var(--leverSize) + var(--border-width));
@@ -125,10 +126,10 @@
 }
 
 .container.dark .bigSwitch .lever::after {
-  background-image: linear-gradient(to right, var(--secondary-dark), rgb(241, 77, 12));
+  background-image: linear-gradient(to right, var(--decoA-dark), var(--decoB-dark));
 }
 .container.light .bigSwitch .lever::after {
-  background-image: linear-gradient(to right, rgb(85, 174, 233), rgb(133, 139, 187));
+  background-image: linear-gradient(to right, var(--decoA-light), var(--decoB-light));
 }
 
 @keyframes leverRotate {
@@ -140,23 +141,32 @@
   }
 }
 
-/* BS Card */
+/* BS Card 🥸 */
 
 .container .bigSwitch .card {
+  --x-deform: 1;
+  --y-deform: 0.6;
+  width: calc(var(--leverSize) * var(--x-deform));
+  height: calc(var(--leverSize) * var(--y-deform));
   position: absolute;
   display: flex;
+  padding: 0.5rem;
+  border-radius: 5px;
+  align-items: center;
   align-self: center;
-  width: calc(var(--leverSize) * 0.9);
-  height: calc(var(--leverSize) * 0.5);
-  transition: all 0.5 ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .container.dark .bigSwitch .card {
   background-color: black;
   transform: translateX(90%);
+  text-align: right;
+  justify-content: right;
 }
 
 .container.light .bigSwitch .card {
   background-color: var(--secondary-light);
   transform: translateX(-90%);
+  text-align: left;
+  justify-content: left;
 }
