@@ -1,28 +1,38 @@
+import { error } from 'console';
+import React from 'react';
 import { JSXElementConstructor } from 'react';
 
 abstract class Tech {
   tech: string;
-  desription: string;
+  subject: string;
   short?: string;
-  logo?: string; /*url iconify*/
+  private _logo?: string; /*url iconify*/
+  private _logoSize: number = 32;
 
-  constructor(tech: string, desription: string, short?: string, logo?: string) {
+  constructor(tech: string, subject: string, short?: string, iconifyId?: string) {
     this.tech = tech;
-    this.desription = desription;
+    this.subject = subject;
     this.short = short;
-    this.logo = logo;
+    this._logo = `https://api.iconify.design/logos/${iconifyId}.svg`;
   }
 
-  myFunction() {
-    return this.tech;
+  get logo() {
+    return this._logo + '?width=' + this._logoSize;
+  }
+  set logosize(size: number) {
+    if (size > 8 && size < 64) {
+      this._logoSize = size;
+    } else {
+      throw error('size allowed between 8 and 64');
+    }
   }
 }
 
 export enum SkillLevel {
-  trainee = 1,
-  novice,
-  proefficient,
-  superior,
+  basic = 1,
+  average,
+  skilled,
+  specialist,
   expert,
 }
 
@@ -31,11 +41,11 @@ export class Skill extends Tech {
   constructor(
     level: SkillLevel,
     tech: string,
-    desription: string,
+    subject: string,
     short?: string,
     logo?: string
   ) {
-    super(tech, desription, short, logo);
+    super(tech, subject, short, logo);
     this.level = level;
   }
 }
@@ -52,11 +62,11 @@ export class Interest extends Tech {
   constructor(
     interest: InterestLevel,
     tech: string,
-    desription: string,
+    subject: string,
     short?: string,
     logo?: string
   ) {
-    super(tech, desription, short, logo);
+    super(tech, subject, short, logo);
     this.interest = interest;
   }
 }
