@@ -17,12 +17,13 @@ export const skills: Skill[] = [
     'Mdb',
     'folder-type-mongodb'
   ),
-  /*HTML*/
   new Skill(SkillLevel.basic, 'PostgreSQL', 'SQL', 'Psql', 'postgresql'),
+  /*HTML*/
   new Skill(SkillLevel.specialist, 'MaterialUI', 'UI', 'Mui', 'material-ui'),
   new Skill(SkillLevel.average, 'Bootstrap', 'UI', 'Bs', 'bootstrap'),
-  new Skill(SkillLevel.specialist, 'HTML5', 'Web', 'Html', 'file-type-html'),
+  new Skill(SkillLevel.skilled, 'HTML5', 'Web', 'Html', 'file-type-html'),
   new Skill(SkillLevel.skilled, 'CSS3', 'Web', 'CSS', 'file-type-css'),
   /*others*/
+  new Skill(SkillLevel.average, 'Express', 'API REST', 'Express', 'express'),
   new Skill(SkillLevel.basic, 'Git', 'GitHub', 'Git', 'git-icon'),
 ];
