@@ -86,6 +86,13 @@
   transition: all 0.2s ease-in-out;
   z-index: 1;
 }
+@media (max-width: 768px) {
+  .container .bigSwitch {
+    --switchW: 200px;
+    --switchH: 100px;
+    --leverGap: 40px;
+  }
+}
 
 .container .bigSwitch:hover {
   box-shadow: inset 0px 0px 6px 12px rgba(0, 0, 0, 0.2),
