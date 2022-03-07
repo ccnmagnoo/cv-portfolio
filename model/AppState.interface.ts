@@ -3,6 +3,7 @@ import Job from './Job.interface';
 import { Skill, Interest } from './Tech';
 
 export interface AppState {
+  appMode: 'light' | 'dark';
   basicData: {
     name: string;
     profesion: string;
