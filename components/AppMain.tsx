@@ -7,10 +7,11 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export const Main = (props: Props) => {
+export const AppMain = (props: Props) => {
   return (
     <section className={`${st.container} ${st.dark}`}>
       <Header />
+      {/*children*/}
       <main className={st.main}>{props.children}</main>
       <Footer />
     </section>
