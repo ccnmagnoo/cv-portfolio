@@ -2,28 +2,21 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import BigSwitch from '../components/bigSwitch/bigSwitch';
+import { Main } from '../components/Main';
 import st from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
-    <section className={`${st.container} ${st.dark}`}>
+    <>
       <Head>
         <title>Carlos&apos;s Profile</title>
         <meta name='description' content='porfolio with Carlos Campos profile' />
-        <link
-          rel='icon'
-          href='https://api.iconify.design/mdi/chart-donut-variant.svg?color=white'
-        />
+        <link rel='icon' href='../../profileLogo.svg' />
       </Head>
-
-      <header className={st.header}>header</header>
-
-      <main className={st.main}>
+      <Main>
         <BigSwitch />
-      </main>
-
-      <footer className={st.footer}>footer</footer>
-    </section>
+      </Main>
+    </>
   );
 };
 
