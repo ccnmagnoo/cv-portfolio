@@ -69,7 +69,7 @@
 
 /*bigSwitch base */
 .container .bigSwitch {
-  --switchW: 300px;
+  --switchW: 320px;
   --switchH: 200px;
   --leverGap: 40px;
   --leverSize: calc(var(--switchH) + var(--leverGap));
@@ -152,7 +152,8 @@
 
 .container .bigSwitch .card {
   --x-deform: 1;
-  --y-deform: 0.6;
+  --y-deform: 0.55;
+  --displacement: 80%; /*card asimetric displacement*/
   width: calc(var(--leverSize) * var(--x-deform));
   height: calc(var(--leverSize) * var(--y-deform));
   position: absolute;
@@ -166,14 +167,14 @@
 
 .container.dark .bigSwitch .card {
   background-color: black;
-  transform: translateX(90%);
+  transform: translateX(calc(1 * var(--displacement)));
   text-align: right;
   justify-content: right;
 }
 
 .container.light .bigSwitch .card {
   background-color: var(--secondary-light);
-  transform: translateX(-90%);
+  transform: translateX(calc(-1 * var(--displacement)));
   text-align: left;
   justify-content: left;
 }

@@ -6,11 +6,10 @@ import Lever from './lever';
 
 const BigSwitch: NextComponentType = () => {
   return (
-    <div className={st.bigSwitch}>
-      <Lever />
-      Big Switch
+    <section className={st.bigSwitch}>
+      <Lever>I&#39;m a Lever</Lever>
       <Card />
-    </div>
+    </section>
   );
 };
 
