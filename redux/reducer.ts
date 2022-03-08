@@ -1,6 +1,5 @@
 //configuration
 
-import App from 'next/app';
 import interest from '../assets/interest';
 import skills from '../assets/skills';
 import { AppState } from '../model/AppState.interface';
