@@ -5,7 +5,7 @@ interface Props {
   children?: React.ReactNode;
 }
 const Lever = (props: Props) => {
-  return <div className={st.lever}>{props.children}</div>;
+  return <div className='lever'>{props.children}</div>;
 };
 
 export default Lever;

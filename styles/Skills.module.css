@@ -11,6 +11,14 @@
   border-radius: 2px;
 }
 
+.dark .skillCard {
+  border-color: yellow;
+}
+
+.light .skillCard {
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
   .skillCard {
     position: relative;

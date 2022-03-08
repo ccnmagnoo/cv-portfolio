@@ -3,7 +3,7 @@ import st from '../../styles/Home.module.css';
 
 export const Card = () => {
   return (
-    <div className={st.card}>
+    <div className='card'>
       Title <br /> subtitle
     </div>
   );

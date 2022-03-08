@@ -9,10 +9,10 @@ interface Props {
 
 export const AppMain = (props: Props) => {
   return (
-    <section className={`${st.container} ${st.dark}`}>
+    <section className='container dark'>
       <Header />
       {/*children*/}
-      <main className={st.main}>{props.children}</main>
+      <main className='main'>{props.children}</main>
       <Footer />
     </section>
   );

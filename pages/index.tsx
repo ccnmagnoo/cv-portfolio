@@ -8,6 +8,8 @@ import { SkillsCard } from '../components/sectionLeft/SkillsCard';
 import { InfoPanel } from '../components/sectionRight/InfoPanel';
 
 const Home: NextPage = () => {
+  const AppMode = st.dark;
+
   return (
     <>
       <Head>
