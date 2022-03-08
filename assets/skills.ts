@@ -1,6 +1,6 @@
 import { Skill, SkillLevel } from '../model/Tech';
 
-export const skills: Skill[] = [
+const skills: Skill[] = [
   /*Languages*/
   new Skill(SkillLevel.expert, 'Typescript', 'Javascript', 'TS', 'typescript-icon'),
   new Skill(SkillLevel.skilled, 'Python', 'Numpy/Pandas', 'Py', 'python'),
@@ -27,3 +27,5 @@ export const skills: Skill[] = [
   new Skill(SkillLevel.average, 'Express', 'API REST', 'Express', 'express'),
   new Skill(SkillLevel.basic, 'Git', 'GitHub', 'Git', 'git-icon'),
 ];
+
+export default skills;

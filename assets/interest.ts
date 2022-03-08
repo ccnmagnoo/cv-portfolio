@@ -16,3 +16,5 @@ const interest: Interest[] = [
   new Interest(InterestLevel.extreme, 'Electron', 'Desktop', 'Electron', 'electron'),
   new Interest(InterestLevel.high, 'Solidity', 'Code', 'WEB3', 'solidity'),
 ];
+
+export default interest;
