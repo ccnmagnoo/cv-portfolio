@@ -4,6 +4,8 @@ import { Skill, Interest } from './Tech';
 
 export interface AppState {
   appMode: 'light' | 'dark';
+  changeToDarkMode: () => void;
+  changeToLightMode: () => void;
   basicData: {
     name: string;
     profesion: string;
