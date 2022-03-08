@@ -1,5 +1,3 @@
-import { error } from 'console';
-
 abstract class Tech {
   tech: string;
   subject: string;
@@ -21,7 +19,7 @@ abstract class Tech {
     if (size > 8 && size < 64) {
       this._logoSize = size;
     } else {
-      throw error('size must be between 8 and 64');
+      throw new Error('size must be between 8 and 64');
     }
   }
 }
