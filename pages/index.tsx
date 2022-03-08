@@ -4,7 +4,8 @@ import Image from 'next/image';
 import BigSwitch from '../components/bigSwitch/bigSwitch';
 import { AppMain } from '../components/AppMain';
 import st from '../styles/Home.module.css';
-import { Skills } from '../components/skills/Skills';
+import { SkillsCard } from '../components/sectionLeft/SkillsCard';
+import { InfoPanel } from '../components/sectionRight/InfoPanel';
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +17,8 @@ const Home: NextPage = () => {
       </Head>
       <AppMain>
         <BigSwitch />
-        <Skills></Skills>
+        <SkillsCard />
+        <InfoPanel />
       </AppMain>
     </>
   );
