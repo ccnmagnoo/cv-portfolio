@@ -106,7 +106,7 @@ a {
 }
 
 /*bigSwitch base */
-.container .bigSwitch {
+.bigSwitch {
   --switchW: 320px;
   --switchH: 200px;
   --leverGap: 40px;
@@ -125,20 +125,20 @@ a {
   z-index: 1;
 }
 @media (max-width: 768px) {
-  .container .bigSwitch {
+  .bigSwitch {
     --switchW: 200px;
     --switchH: 100px;
     --leverGap: 40px;
   }
 }
 
-.container .bigSwitch:hover {
+.bigSwitch:hover {
   box-shadow: inset 0px 0px 6px 12px rgba(0, 0, 0, 0.2),
     0 0 3px 3px rgba(255, 255, 255, 0.1);
 }
 
 /*BS Lever 🏒*/
-.container .bigSwitch .lever {
+.bigSwitch .lever {
   border-radius: 1000px;
   width: var(--leverSize);
   height: var(--leverSize);
@@ -149,17 +149,17 @@ a {
   justify-content: center;
 }
 /*🌒 dark mode*/
-.container.dark .bigSwitch .lever {
+.dark .bigSwitch .lever {
   background-color: black;
   left: calc(-1 * var(--leverGap));
 }
 /*🌞 light mode*/
-.container.light .bigSwitch .lever {
+.light .bigSwitch .lever {
   background-color: var(--secondary-light);
   left: calc(var(--switchW) - var(--switchH));
 }
 
-.container .bigSwitch .lever::after {
+.bigSwitch .lever::after {
   content: '';
   --border-width: 16px;
   position: absolute;
@@ -170,11 +170,15 @@ a {
   animation: 5s leverRotate linear infinite;
 }
 
-.container.dark .bigSwitch .lever::after {
+.dark .bigSwitch .lever::after {
   background-image: linear-gradient(to right, var(--decoA-dark), var(--decoB-dark));
 }
-.container.light .bigSwitch .lever::after {
+.light .bigSwitch .lever::after {
   background-image: linear-gradient(to right, var(--decoA-light), var(--decoB-light));
+}
+
+.bigSwitch:hover .lever::after {
+  animation-duration: 1s;
 }
 
 @keyframes leverRotate {
@@ -187,7 +191,6 @@ a {
 }
 
 /* BS Card 🥸 */
-
 .container .bigSwitch .card {
   --x-deform: 1;
   --y-deform: 0.55;
