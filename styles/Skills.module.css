@@ -1,3 +1,20 @@
 .skillCard {
   border: var(--border);
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: all 0.1 ease-in-out;
+  min-width: 200px;
+  min-height: auto;
+  margin: 2rem;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .skillCard {
+    position: relative;
+    left: 0;
+    top: 50px;
+  }
 }

@@ -3,6 +3,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .dark {
@@ -27,6 +28,7 @@
 }
 .main {
   /*border: var(--border);*/
+  position: relative;
   min-height: 80vh;
   padding: 4rem 0;
   flex: 1;
