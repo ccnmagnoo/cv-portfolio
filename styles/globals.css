@@ -15,7 +15,7 @@ body {
   --decoA-light: rgb(85, 174, 233);
   --decoB-light: rgb(133, 139, 187);
   /*developer assist*/
-  --border: 1px solid magenta;
+  --border: 1px dashed magenta;
 
   padding: 0;
   margin: 0;
@@ -177,10 +177,6 @@ a {
   background-image: linear-gradient(to right, var(--decoA-light), var(--decoB-light));
 }
 
-.bigSwitch:hover .lever::after {
-  animation-duration: 1s;
-}
-
 @keyframes leverRotate {
   0% {
     transform: rotate(0deg);
@@ -190,14 +186,14 @@ a {
   }
 }
 
-/* BS Card 🥸 */
+/* Card 🥸 */
 .container .bigSwitch .card {
   --x-deform: 1;
   --y-deform: 0.55;
-  --displacement: 80%; /*card asimetric displacement*/
+  --displacement: 75%; /*card asimetric displacement*/
   width: calc(var(--leverSize) * var(--x-deform));
   height: calc(var(--leverSize) * var(--y-deform));
-  position: absolute;
+  position: relative;
   display: flex;
   padding: 0.5rem;
   border-radius: 5px;
