@@ -17,11 +17,11 @@ const Home: NextPage = () => {
         <meta name='description' content='porfolio with Carlos Campos profile' />
         <link rel='icon' href='../../profileLogo.svg' />
       </Head>
-      <AppMain>
+      <>
         <BigSwitch />
         <SkillsCard />
         <InfoPanel />
-      </AppMain>
+      </>
     </>
   );
 };
