@@ -10,7 +10,6 @@ const Provider: React.FC = (props) => {
   const [state, dispatch] = React.useReducer(appReducer, initialState);
   const init: Partial<AppState> = {
     ...state,
-    appMode: 'dark',
     changeToDarkMode: () => dispatch(darkMode),
     changeToLightMode: () => dispatch(lightMode),
   };
