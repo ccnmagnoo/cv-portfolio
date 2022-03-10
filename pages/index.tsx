@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import BigSwitch from '../components/bigSwitch/bigSwitch';
-import { AppMain } from '../components/AppMain';
 import st from '../styles/Home.module.css';
 import { SkillsCard } from '../components/sectionLeft/SkillsCard';
 import { InfoPanel } from '../components/sectionRight/InfoPanel';
