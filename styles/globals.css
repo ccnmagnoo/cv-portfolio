@@ -11,7 +11,7 @@ body {
   --background-light: var(--primary-dark);
   --primary-light: #151530;
   --secondary-light: #395c91;
-  --caption-light: #818387;
+  --caption-light: #b5b9c2;
   --decoA-light: rgb(85, 174, 233);
   --decoB-light: rgb(133, 139, 187);
   /*developer assist*/
@@ -189,7 +189,7 @@ a {
 /* Card 🥸 */
 .container .bigSwitch .card {
   --x-deform: 1;
-  --y-deform: 0.55;
+  --y-deform: 0.45;
   --displacement: 75%; /*card asimetric displacement*/
   position: relative;
   transition: all 0.4s ease-in-out;
@@ -204,10 +204,11 @@ a {
 }
 /*animated canvas inside card container*/
 .card .canvas {
-  border: var(--border);
-  display: flex;
+  /* border: var(--border); */
+  display: flexbox;
+  display: -ms-flexbox;
   align-items: center;
-  align-self: center;
+  justify-content: center;
   padding: 0.5rem;
   width: calc(var(--leverSize) * var(--x-deform));
   height: calc(var(--leverSize) * var(--y-deform));
@@ -216,13 +217,49 @@ a {
 .dark .card .canvas {
   background-color: black;
   text-align: right;
-  justify-content: right;
 }
 
 .light .card .canvas {
   background-color: var(--secondary-light);
   text-align: left;
-  justify-content: left;
+}
+/* card header */
+.card .canvas h4 {
+  /* border: var(--border); */
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: 'Major Mono Display', monospace;
+}
+.dark .card .canvas h4 {
+  color: var(--secondary-dark);
+}
+.light .card .canvas h4 {
+  color: white;
+}
+
+/* card paragraph */
+.card .canvas p {
+  /* border: var(--border); */
+  font-size: 1rem;
+}
+.dark .card .canvas p {
+  color: var(--caption-dark);
+}
+.light .card .canvas p {
+  color: var(--caption-light);
+}
+
+@media (max-width: 768px) {
+  .container .bigSwitch .card {
+    --y-deform: 0.6;
+  }
+  .card .canvas h4 {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+  .card .canvas p {
+    font-size: 0.8rem;
+  }
 }
 
 /*Left Section*/
