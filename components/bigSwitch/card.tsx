@@ -3,7 +3,11 @@ import React from 'react';
 
 import { AppContext } from '../../redux/context';
 
-export const Card = () => {
+interface Props {
+  children?: React.ReactNode;
+}
+
+export const Card = (props: Props) => {
   const context = React.useContext(AppContext);
   return (
     <div className='card'>
@@ -11,11 +15,11 @@ export const Card = () => {
         className='canvas'
         animate={{
           scale: [1, 1.2, 1.2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
+          rotate: [0, 0, 5, -5, 0],
           borderRadius: ['5px', '50px', '1000px', '50px', '5px'],
         }}
       >
-        Title <br /> subtitle
+        {props.children}
       </motion.div>
     </div>
   );

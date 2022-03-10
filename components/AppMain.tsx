@@ -1,5 +1,6 @@
 import React from 'react';
 import { AppContext } from '../redux/context';
+
 import { Footer } from './Footer';
 import { Header } from './Header';
 
