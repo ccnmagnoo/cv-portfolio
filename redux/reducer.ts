@@ -6,9 +6,9 @@ import { AppState } from '../model/AppState.interface';
 
 //init
 export const initialState: Partial<AppState> = {
-  appMode: 'dark',
+  appMode: 'dark' /*initial app mode 🌞/🌙*/,
   basicData: {
-    name: ['cArlos', 'R.', 'cAmpos', 'N.'],
+    name: ['cARlos', 'R.', 'cAmpos', 'N.'],
     profesion: 'Mid Developer / Mechanical Engineer & Data Analytics',
   },
   skills: skills,

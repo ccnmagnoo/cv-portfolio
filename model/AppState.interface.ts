@@ -7,7 +7,7 @@ export interface AppState {
   changeToDarkMode: () => void;
   changeToLightMode: () => void;
   basicData: {
-    name: string;
+    name: string | string[] | { [key: string]: string };
     profesion: string;
     description?: string /*no more than 3 lines*/;
   };
