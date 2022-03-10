@@ -7,7 +7,10 @@ import { AppState } from '../model/AppState.interface';
 //init
 export const initialState: Partial<AppState> = {
   appMode: 'dark',
-  basicData: { name: 'Carlos Campos', profesion: 'Mid Developer / Mechanical Engineer' },
+  basicData: {
+    name: ['cArlos', 'R.', 'cAmpos', 'N.'],
+    profesion: 'Mid Developer / Mechanical Engineer & Data Analytics',
+  },
   skills: skills,
   interest: interest,
 };
