@@ -1,6 +1,6 @@
 .skillCard {
   border: var(--border);
-  display: flex;
+  display: -ms-flexbox;
   position: absolute;
   left: 0;
   transition: all 0.1 ease-in-out;

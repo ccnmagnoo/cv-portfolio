@@ -9,7 +9,7 @@ export interface AppState {
   basicData: {
     name: string | string[] | { [key: string]: string };
     profesion: string;
-    description?: string /*no more than 3 lines*/;
+    description?: string /*no more than 20 words*/;
   };
   contact: {
     email: string;
