@@ -4,17 +4,24 @@
  @function set logoColor string color 6 or 3 length
  @function get logo return url to iconify
  */
+
+export type TechType =
+  | 'developer'
+  | 'front-end'
+  | 'back-end'
+  | 'data-analytics'
+  | 'other';
 export abstract class Tech {
   tech: string;
-  subject: string;
+  types: TechType; /*variant of skill set, front-end, back-end general , etc*/
   short?: string;
   private _iconify?: string; /*url iconify*/
-  private _logoSize: number = 32;
+  private _logoSize: number = 9;
   private _logoColor?: number | string = undefined;
 
-  constructor(tech: string, subject: string, short?: string, iconifyId?: string) {
+  constructor(tech: string, types: TechType, short?: string, iconifyId?: string) {
     this.tech = tech;
-    this.subject = subject;
+    this.types = types;
     this.short = short;
     this._iconify = `https://api.iconify.design/${iconifyId}.svg`;
   }
@@ -59,11 +66,11 @@ export class Skill extends Tech {
   constructor(
     level: SkillLevel,
     tech: string,
-    subject: string,
+    types: TechType,
     short?: string,
     logo?: string
   ) {
-    super(tech, subject, short, logo);
+    super(tech, types, short, logo);
     this.level = level;
   }
 }
@@ -80,11 +87,11 @@ export class Interest extends Tech {
   constructor(
     interest: InterestLevel,
     tech: string,
-    subject: string,
+    types: TechType,
     short?: string,
     logo?: string
   ) {
-    super(tech, subject, short, logo);
+    super(tech, types, short, logo);
     this.interest = interest;
   }
 }

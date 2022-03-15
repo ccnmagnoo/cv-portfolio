@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { Interest, InterestLevel, Skill, SkillLevel, Tech } from '../../model/Tech';
+import { Interest, InterestLevel, Skill, SkillLevel } from '../../model/Tech';
 import { MeterBar } from './MeterBar';
 import { MeterBox } from './MeterBox';
 import { MeterContainer } from './MeterContainer';
@@ -15,8 +15,6 @@ export const Meter = (props: Partial<Props>) => {
     switch (m?.constructor.name) {
       case 'Skill': {
         const e = m as Skill;
-        e.logoSize = 9; /*set logo size*/
-        e.logoColor = 'fff'; /*set logo color*/
         return (
           <MeterBar
             min={1}

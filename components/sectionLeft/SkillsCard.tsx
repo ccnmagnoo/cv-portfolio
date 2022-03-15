@@ -1,25 +1,25 @@
 import React from 'react';
 import { AppContext } from '../../redux/context';
-import st from '../../styles/Skills.module.css';
 import { Meter } from '../meter/Meter';
+import { TechCard } from './TechCard';
 
 export const SkillsCard = () => {
   const context = React.useContext(AppContext);
   const skillList = context.skills;
   return (
     <section className='skillCard'>
-      <h5>front-end</h5>
-      <ul>
-        {skillList?.slice(undefined, 9).map((element, index) => {
-          return <Meter key={index} element={element} />;
-        })}
-      </ul>
-      <h5>back-end</h5>
-      <ul>
-        {skillList?.slice(9, undefined).map((element, index) => {
-          return <Meter key={index} element={element} />;
-        })}
-      </ul>
+      <TechCard filter={'developer'} techList={skillList}>
+        <h6>Relative skill set</h6>
+      </TechCard>
+      <TechCard filter={'front-end'} techList={skillList}>
+        <h6>front-end</h6>
+      </TechCard>
+      <TechCard filter={'back-end'} techList={skillList}>
+        <h6>back-end</h6>
+      </TechCard>
+      <TechCard filter={'data-analytics'} techList={skillList}>
+        <h6>Data Analytics</h6>
+      </TechCard>
     </section>
   );
 };
