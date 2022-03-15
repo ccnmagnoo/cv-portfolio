@@ -15,6 +15,14 @@ const skills: Skill[] = [
   /*Fron-end*/
   new Skill(
     SkillLevel.skilled,
+    'HTML5 && CSS3',
+    'front-end',
+    'Html',
+    'vscode-icons/file-type-html'
+  ),
+  // new Skill(SkillLevel.skilled, 'CSS3', 'front-end', 'CSS', 'vscode-icons/file-type-css'),
+  new Skill(
+    SkillLevel.specialist,
     'ReacJs',
     'front-end',
     'Rjs',
@@ -24,14 +32,6 @@ const skills: Skill[] = [
   /*HTML*/
   new Skill(SkillLevel.specialist, 'MaterialUI', 'front-end', 'Mui', 'logos/material-ui'),
   new Skill(SkillLevel.average, 'Bootstrap', 'front-end', 'Bs', 'logos/bootstrap'),
-  new Skill(
-    SkillLevel.skilled,
-    'HTML5',
-    'front-end',
-    'Html',
-    'vscode-icons/file-type-html'
-  ),
-  new Skill(SkillLevel.skilled, 'CSS3', 'front-end', 'CSS', 'vscode-icons/file-type-css'),
   /*Backend*/
   new Skill(SkillLevel.specialist, 'Firebase', 'back-end', 'Fs', 'logos/firebase'),
   new Skill(
@@ -53,7 +53,7 @@ const skills: Skill[] = [
   ),
   new Skill(
     SkillLevel.average,
-    'Pandas & Numby',
+    'Pandas && Numby',
     'data-analytics',
     'Numpy',
     'logos/numpy'
