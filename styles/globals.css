@@ -65,7 +65,7 @@ a {
 .main {
   /*border: var(--border);*/
   position: relative;
-  min-height: 80vh;
+  min-height: 82vh;
   padding: 4rem 0;
   flex: 1;
   display: flex;
@@ -207,8 +207,6 @@ a {
 }
 /*animated canvas inside card container*/
 .card .canvas {
-  /* border: var(--border); */
-  display: flexbox;
   display: -ms-flexbox;
   align-items: center;
   justify-content: center;
@@ -291,14 +289,13 @@ article {
 
 @media (max-width: 800px) {
   .skillCard {
+    /* border: var(--border); */
     position: relative;
     display: flex;
     flex-wrap: wrap;
     max-width: 600px;
     left: 0;
-    border: var(--border);
     justify-content: center;
-
     top: 50px;
   }
   .skillCard article {
@@ -316,11 +313,11 @@ article {
 
 .meter .container {
   font-size: var(--font-size);
+  text-transform: lowercase;
   position: relative;
   display: block;
   width: 100%;
   min-width: 160px; /*left panel width and METER width*/
-
   height: 100%;
   padding: 0;
   margin-bottom: 5px;
@@ -336,19 +333,32 @@ article {
   background-color: black;
 }
 .light .meter .container .box {
-  border: 0.5px solid var(--secondary-light);
-  background-color: var(--primary-light);
+  /* border: 0.5px solid var(--secondary-light); */
+  background-color: var(--caption-light);
 }
-.meter .container .box .bar {
-  min-height: 2.5px;
+.bar {
+  height: 3px;
+  position: relative;
   border-radius: 1px 20px 20px 1px;
 }
+@media (min-height: 800px) {
+  .bar {
+    height: 5px;
+  }
+}
 
-.dark .meter .container .bar {
+.dark .bar {
   background-image: linear-gradient(
     to right,
     var(--decoB-dark) 0%,
     var(--decoA-dark) 80%
+  );
+}
+.light .bar {
+  background-image: linear-gradient(
+    to right,
+    var(--decoB-light) 0%,
+    var(--decoA-light) 80%
   );
 }
 
@@ -357,10 +367,9 @@ article {
   height: var(--font-size);
 }
 
-.light .meter .container .bar {
-  background-image: linear-gradient(
-    to right,
-    var(--background-ligt) 0%,
-    var(--secondary-light) 80%
-  );
+.dark .meter img {
+  filter: hue-rotate(0deg) grayscale(30%);
+}
+.light .meter img {
+  filter: hue-rotate(0deg) grayscale(80%);
 }
