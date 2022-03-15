@@ -2,18 +2,19 @@ import React from 'react';
 import { Interest, Skill, TechType } from '../../model/Tech';
 import { Meter } from '../meter/Meter';
 
+/**
+ * @function TechCard requires a specific
+ * @param children? optional header
+ * @param filter TechType enum,
+ * @param techList array Skill[] or Interest[]
+ *
+ */
 interface Props {
   children?: React.ReactNode;
   filter: TechType;
   techList?: Skill[] | Interest[];
 }
 
-/**@function TechCard requires a specific
- * @param children? optional header
- * @param filter TechType enum,
- * @param techList array Skill[] or Interest[]
- *
- */
 export const TechCard = (props: Props) => {
   return (
     <article>
