@@ -11,7 +11,7 @@ const interest: Interest[] = [
     'vscode-icons/file-type-go'
   ),
   new Interest(
-    InterestLevel.high,
+    InterestLevel.moderate,
     'TailwindCSS',
     'front-end',
     'Tail',
@@ -38,6 +38,13 @@ const interest: Interest[] = [
     'back-end',
     'WEB3',
     'vscode-icons/file-type-solidity'
+  ),
+  new Interest(
+    InterestLevel.extreme,
+    'TensorFlow/JS',
+    'back-end',
+    'TF',
+    'logos/tensorflow'
   ),
 ];
 

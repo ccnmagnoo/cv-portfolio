@@ -352,7 +352,7 @@ article {
   }
 }
 
-@media (min-height: 800px) {
+@media (orientation: portrait), (min-height: 800px) {
   .bar {
     height: 5px;
     animation: barGrow 0.75s ease-out 1;

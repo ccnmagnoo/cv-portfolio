@@ -22,6 +22,7 @@ export const Meter = (props: Partial<Props>) => {
             value={e?.level}
             tag={e?.tech}
             logo={e.logo}
+            update={e.update}
           />
         );
       }
@@ -42,10 +43,21 @@ export const Meter = (props: Partial<Props>) => {
     }
   };
 
+  const getUpdate = (m: typeof props.element) => {
+    if (m?.constructor.name === 'Skill') {
+      const e = m as Skill;
+      return e.update?.toDateString();
+    } else {
+      return undefined;
+    }
+  };
+
   return (
     <li className='meter'>
       <MeterContainer>
-        <img src={props.element?.logo} alt='' /> {props.element?.tech}
+        {/*tech headers 🎩*/}
+        <img src={props.element?.logo} alt='' /> {props.element?.tech}{' '}
+        {/*colored meter bar 📶 */}
         <MeterBox>{meter(props.element)}</MeterBox>
       </MeterContainer>
     </li>

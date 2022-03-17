@@ -19,7 +19,13 @@ export abstract class Tech {
   private _logoSize: number = 9;
   private _logoColor?: number | string = undefined;
 
-  constructor(tech: string, types: TechType, short?: string, iconifyId?: string) {
+  constructor(
+    tech: string,
+    types: TechType,
+    short?: string,
+    iconifyId?: string,
+    dateUpdate?: Date
+  ) {
     this.tech = tech;
     this.types = types;
     this.short = short;
@@ -61,16 +67,28 @@ export enum SkillLevel {
   expert,
 }
 
+/**
+ * @constructor Skill @extends Tech  representive instance of confidence with certain tech,
+ * @param SkillLevel from basic to expert
+ * @param tech name of technology,
+ * @param types variant fron-end or back-end tech objective
+ * @param short, tech acronyms,
+ * @param logo, icon address in iconify {folder/name}.svg,
+ * @param update {Date} date of skill confidence perception
+ */
 export class Skill extends Tech {
   level: SkillLevel;
+  update?: Date;
   constructor(
     level: SkillLevel,
     tech: string,
     types: TechType,
     short?: string,
-    logo?: string
+    logo?: string,
+    update?: Date
   ) {
     super(tech, types, short, logo);
+    this.update = update;
     this.level = level;
   }
 }
@@ -82,6 +100,14 @@ export enum InterestLevel {
   extreme,
 }
 
+/**
+ * @class Interest representive instance of tech's interest,
+ * @param interest 4 levels from slighly to extreme
+ * @param tech name of technology,
+ * @param types variant fron-end or back-end tech objective
+ * @param short, tech acronyms,
+ * @param logo, icon address in iconify {folder/name}.svg,
+ */
 export class Interest extends Tech {
   interest: InterestLevel;
   constructor(
