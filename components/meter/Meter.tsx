@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Interest, InterestLevel, Skill, SkillLevel } from '../../model/Tech';
+import { useComments } from './Comments';
 import { MeterBar } from './MeterBar';
 import { MeterBox } from './MeterBox';
 import { MeterContainer } from './MeterContainer';
@@ -11,7 +12,7 @@ interface Props {
 
 export const Meter = (props: Partial<Props>) => {
   /**@function meter return Bar jsx */
-  const meter = (m: typeof props.element) => {
+  const getMeterBar = (m: typeof props.element) => {
     switch (m?.constructor.name) {
       case 'Skill': {
         const e = m as Skill;
@@ -42,7 +43,11 @@ export const Meter = (props: Partial<Props>) => {
         return undefined;
     }
   };
-
+  /**
+   * @function getUpdate
+   * @param m {Skill|Insteres|undefined}
+   * @return update {Date}
+   */
   const getUpdate = (m: typeof props.element) => {
     if (m?.constructor.name === 'Skill') {
       const e = m as Skill;
@@ -51,14 +56,19 @@ export const Meter = (props: Partial<Props>) => {
       return undefined;
     }
   };
+  const comments = useComments(props.element);
 
   return (
     <li className='meter'>
+      {/**
+       * @function MeterContainer > @function MeterBox > @function MeterBar
+       */}
       <MeterContainer>
         {/*tech headers 🎩*/}
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
-        <MeterBox>{meter(props.element)}</MeterBox>
+        <MeterBox>{getMeterBar(props.element)}</MeterBox>
+        {comments}
       </MeterContainer>
     </li>
   );

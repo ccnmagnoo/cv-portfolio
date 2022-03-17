@@ -78,18 +78,21 @@ export enum SkillLevel {
  */
 export class Skill extends Tech {
   level: SkillLevel;
-  update?: Date;
+  update: Date;
+  comment?: string;
   constructor(
     level: SkillLevel,
     tech: string,
     types: TechType,
     short?: string,
     logo?: string,
-    update?: Date
+    update?: Date,
+    comment?: string
   ) {
     super(tech, types, short, logo);
-    this.update = update;
     this.level = level;
+    this.update = update ?? new Date();
+    this.comment = comment;
   }
 }
 

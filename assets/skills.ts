@@ -1,35 +1,46 @@
-import { Skill, SkillLevel } from '../model/Tech';
+import { Skill, SkillLevel as Level } from '../model/Tech';
 
 const skills: Skill[] = [
   /*base*/
   new Skill(
-    SkillLevel.expert,
+    Level.expert,
     'Typescript/JS',
     'developer',
     'TS',
     'logos/typescript-icon',
-    new Date(2022, 2, 1)
+    new Date(2022, 2, 1),
+    'Current favorite language. I prefer it over JS and a blame Kotlin for that. It is familiar & comfortable for me, and his lint saved me a lot of debuggin`s hours.'
   ),
   new Skill(
-    SkillLevel.skilled,
+    Level.skilled,
     'Kotlin',
     'developer',
     'KT',
     'logos/kotlin',
-    new Date(2019, 6, 6)
+    new Date(2019, 6, 6),
+    'Second language, I learned this over Java because his lovely resemblance to Python. I started into POO world and hard typing thanks to this.'
   ),
   new Skill(
-    SkillLevel.average,
+    Level.average,
     'Python',
     'developer',
     'Py',
     'logos/python',
-    new Date(2018, 3, 1)
+    new Date(2017, 3, 1),
+    "Python's my first love, opened my eyes when i needed to evolve from VBA💘, helping me to solve a lot of engineering problems giving me a powefull tools."
   ),
-  new Skill(SkillLevel.basic, 'Git', 'developer', 'Git', 'logos/git-icon'),
+  new Skill(
+    Level.basic,
+    'Git',
+    'developer',
+    'Git',
+    'logos/git-icon',
+    new Date(2020, 7, 13),
+    'Necesary basic skill, I know how to use just basics; you know push pull, fork & commit'
+  ),
   /*Fron-end*/
   new Skill(
-    SkillLevel.skilled,
+    Level.skilled,
     'HTML5 && CSS3',
     'front-end',
     'Html',
@@ -38,7 +49,7 @@ const skills: Skill[] = [
   ),
   // new Skill(SkillLevel.skilled, 'CSS3', 'front-end', 'CSS', 'vscode-icons/file-type-css'),
   new Skill(
-    SkillLevel.specialist,
+    Level.specialist,
     'ReacJs',
     'front-end',
     'Rjs',
@@ -46,7 +57,7 @@ const skills: Skill[] = [
     new Date(2021, 12, 17)
   ),
   new Skill(
-    SkillLevel.average,
+    Level.average,
     'NextJs',
     'front-end',
     'Njs',
@@ -54,12 +65,12 @@ const skills: Skill[] = [
     new Date(2022, 2, 1)
   ),
   /*HTML*/
-  new Skill(SkillLevel.specialist, 'MaterialUI', 'front-end', 'Mui', 'logos/material-ui'),
-  new Skill(SkillLevel.average, 'Bootstrap', 'front-end', 'Bs', 'logos/bootstrap'),
+  new Skill(Level.specialist, 'MaterialUI', 'front-end', 'Mui', 'logos/material-ui'),
+  new Skill(Level.average, 'Bootstrap', 'front-end', 'Bs', 'logos/bootstrap'),
   /*Backend*/
-  new Skill(SkillLevel.specialist, 'Firebase', 'back-end', 'Fs', 'logos/firebase'),
+  new Skill(Level.specialist, 'Firebase', 'back-end', 'Fs', 'logos/firebase'),
   new Skill(
-    SkillLevel.average,
+    Level.average,
     'MongoDb',
     'back-end',
     'Mdb',
@@ -67,7 +78,7 @@ const skills: Skill[] = [
     new Date(2022, 1, 6)
   ),
   new Skill(
-    SkillLevel.basic,
+    Level.basic,
     'PostgreSQL',
     'back-end',
     'Psql',
@@ -75,7 +86,7 @@ const skills: Skill[] = [
     new Date(2021, 3, 31)
   ),
   new Skill(
-    SkillLevel.average,
+    Level.average,
     'REST Express',
     'back-end',
     'Ex',
@@ -84,7 +95,7 @@ const skills: Skill[] = [
   ),
   /*others*/
   new Skill(
-    SkillLevel.specialist,
+    Level.specialist,
     'PowerBi/Dax',
     'data-analytics',
     'Bi',
@@ -92,7 +103,7 @@ const skills: Skill[] = [
     new Date(2022, 2, 26)
   ),
   new Skill(
-    SkillLevel.average,
+    Level.average,
     'Pandas && Numby',
     'data-analytics',
     'Numpy',
