@@ -56,7 +56,7 @@ export const Meter = (props: Partial<Props>) => {
     <li className='meter'>
       <MeterContainer>
         {/*tech headers 🎩*/}
-        <img src={props.element?.logo} alt='' /> {props.element?.tech}{' '}
+        <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
         <MeterBox>{meter(props.element)}</MeterBox>
       </MeterContainer>
