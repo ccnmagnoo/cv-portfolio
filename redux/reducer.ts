@@ -13,6 +13,8 @@ export const initialState: Partial<AppState> = {
   },
   skills: skills,
   interest: interest,
+  changeToDarkMode: () => {},
+  changeToLightMode: () => {},
 };
 
 //Actions Types

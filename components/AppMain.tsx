@@ -1,6 +1,5 @@
 import React from 'react';
 import { AppContext } from '../redux/context';
-
 import { Footer } from './Footer';
 import { Header } from './Header';
 
@@ -10,10 +9,9 @@ interface Props {
 
 export const AppMain = (props: Props) => {
   const context = React.useContext(AppContext);
-  const appMode = context.appMode;
 
   return (
-    <section className={`container ${appMode}`}>
+    <section className={`container ${context.appMode}`}>
       <Header />
       {/*children*/}
       <main className='main'>{props.children}</main>

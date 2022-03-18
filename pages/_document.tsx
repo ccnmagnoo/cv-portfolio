@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import Provider from '../redux/context';
 
 export default function Document() {
   return (
@@ -13,9 +12,8 @@ export default function Document() {
         />
       </Head>
       <body>
-        <Provider>
-          <Main />
-        </Provider>
+        <Main />
+
         <NextScript />
       </body>
     </Html>

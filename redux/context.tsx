@@ -7,7 +7,9 @@ export const AppContext = React.createContext(initialState);
 
 //provider
 const Provider: React.FC = (props) => {
+  //useReducer
   const [state, dispatch] = React.useReducer(appReducer, initialState);
+  //intial State + dispacher
   const init: Partial<AppState> = {
     ...state,
     changeToDarkMode: () => dispatch(darkMode),

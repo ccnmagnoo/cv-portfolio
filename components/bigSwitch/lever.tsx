@@ -1,11 +1,30 @@
-import { NextComponentType } from 'next';
 import React from 'react';
-import st from '../../styles/Home.module.css';
+import { AppContext } from '../../redux/context';
+
 interface Props {
   children?: React.ReactNode;
 }
+
 const Lever = (props: Props) => {
-  return <div className='lever'>{props.children}</div>;
+  const context = React.useContext(AppContext);
+  const changeMode = () => {
+    switch (context.appMode) {
+      case 'dark': {
+        return context.changeToLightMode;
+      }
+      case 'light': {
+        return context.changeToDarkMode;
+      }
+      default:
+        return undefined;
+    }
+  };
+
+  return (
+    <div className='lever' onClick={changeMode()}>
+      {props.children}
+    </div>
+  );
 };
 
 export default Lever;

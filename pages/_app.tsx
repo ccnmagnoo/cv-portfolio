@@ -1,12 +1,15 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { AppMain } from '../components/AppMain';
+import Provider from '../redux/context';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <AppMain>
-      <Component {...pageProps} />
-    </AppMain>
+    <Provider>
+      <AppMain>
+        <Component {...pageProps} />
+      </AppMain>
+    </Provider>
   );
 }
 
