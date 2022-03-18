@@ -56,7 +56,7 @@ const skills: Skill[] = [
     'Rjs',
     'vscode-icons/file-type-reactjs',
     new Date(2021, 12, 17),
-    'My principal front-end library. React/Hooks + TS is a indispensable tool for my solutions.'
+    'My principal front-end library. React/Hooks + TS is a indispensable tool for give an optimal soluctions.'
   ),
   new Skill(
     Level.average,
@@ -70,11 +70,12 @@ const skills: Skill[] = [
   /*HTML*/
   new Skill(
     Level.specialist,
-    'MaterialUI',
+    'Material UI',
     'front-end',
     'Mui',
     'logos/material-ui',
-    new Date(2021, 6, 31)
+    new Date(2021, 6, 31),
+    'When a I need to be quick, and performance is the focus'
   ),
   new Skill(
     Level.average,
@@ -82,17 +83,27 @@ const skills: Skill[] = [
     'front-end',
     'Bs',
     'logos/bootstrap',
-    new Date(2021, 3, 31)
+    new Date(2021, 3, 31),
+    'Beautiful & simple, also when i need more personalizable UI'
   ),
   /*Backend*/
-  new Skill(Level.specialist, 'Firebase', 'back-end', 'Fs', 'logos/firebase'),
+  new Skill(
+    Level.specialist,
+    'Firebase',
+    'back-end',
+    'Fs',
+    'logos/firebase',
+    new Date(2019, 7, 6),
+    'Cover mostly 90% my needs for a quick & easy proyect implementation & scalability. I use it a lot in my personal initiatives'
+  ),
   new Skill(
     Level.average,
     'MongoDb',
     'back-end',
     'Mdb',
     'vscode-icons/file-type-mongo',
-    new Date(2022, 1, 6)
+    new Date(2022, 1, 6),
+    'Excelent for simplify development process.'
   ),
   new Skill(
     Level.basic,
@@ -100,7 +111,8 @@ const skills: Skill[] = [
     'back-end',
     'Psql',
     'logos/postgresql',
-    new Date(2021, 3, 31)
+    new Date(2021, 3, 31),
+    'If we talk about SQL databases, this is my core'
   ),
   new Skill(
     Level.average,
