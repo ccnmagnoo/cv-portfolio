@@ -391,8 +391,9 @@ article {
 
 /* Comment dialog in skill constainer 📨 */
 .meter .commentDialog {
-  --dialog-width: 100px;
+  --dialog-width: 120px;
   font-size: 0.65rem;
+
   display: none;
   position: absolute;
   right: calc((var(--dialog-width) + 10px) * -1);
@@ -401,8 +402,42 @@ article {
   max-width: var(--dialog-width);
   min-height: 50px;
   text-align: start;
+  padding: 0.4rem;
+  border-radius: 2px;
+  z-index: 3;
+  backdrop-filter: blur(3px);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  text-transform: none;
+}
+
+.dark .meter .commentDialog {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.light .meter .commentDialog {
+  background-color: var(--background-light);
 }
 
 .meter:hover .commentDialog {
   display: block;
+}
+/*dialog arrow*/
+.meter .commentDialog::after {
+  --arrow-size: 8px;
+  --transparent: var(--arrow-size) solid transparent;
+  content: '';
+  position: absolute;
+  border-top: var(--transparent);
+  border-bottom: var(--transparent);
+  width: 0;
+  height: 0;
+  left: calc(var(--arrow-size) * -1);
+  top: 8px;
+}
+
+.dark .meter .commentDialog::after {
+  border-right: var(--arrow-size) solid black;
+}
+
+.light .meter .commentDialog::after {
+  border-right: var(--arrow-size) solid var(--secondary-light);
 }
