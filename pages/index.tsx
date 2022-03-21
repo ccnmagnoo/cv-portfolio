@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import BigSwitch from '../components/bigSwitch/bigSwitch';
-import st from '../styles/Home.module.css';
 import { SkillsCard } from '../components/sectionLeft/SkillsCard';
 import { InfoPanel } from '../components/sectionRight/InfoPanel';
 
@@ -24,7 +23,3 @@ const Home: NextPage = () => {
 };
 
 export default Home;
-
-/** NextJs Page Transition example
- * https://github.com/ivandotv/nextjs-page-transitions/blob/main/pages/_app.tsx
- * */
