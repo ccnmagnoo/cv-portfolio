@@ -113,7 +113,7 @@ a {
   --leverSize: calc(var(--switchH) + var(--leverGap));
   color: var(--primary-dark);
   border-radius: 1000px;
-  cursor: pointer;
+
   position: relative;
   width: var(--switchW);
   height: var(--switchH);
@@ -145,6 +145,7 @@ a {
   position: absolute;
   transition: all 0.4s ease-in-out;
   display: flex;
+  cursor: pointer;
   align-items: center;
   justify-content: center;
 }
