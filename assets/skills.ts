@@ -27,7 +27,7 @@ const skills: Skill[] = [
     'Py',
     'logos/python',
     new Date(2017, 3, 1),
-    'Python will be always my first love 💘. His kwnolegde gave me a huge boost in my capabilities to solving engineering problems and data analisys.'
+    'Python will be always my first love 💘. Python was a fundamental tool for give smart soluctions to a complex and diverse engineering and data problems.'
   ),
   new Skill(
     Level.basic,
@@ -94,7 +94,7 @@ const skills: Skill[] = [
     'Fs',
     'logos/firebase',
     new Date(2019, 7, 6),
-    'Cover mostly 90% my needs for a quick & easy proyect implementation & scalability. I use it a lot in my personal initiatives'
+    'I"m huge fan. I use it a lot in my apps when I need speed and flexibility in my solutions 💪. Awesome tool and one of my favorites backend services'
   ),
   new Skill(
     Level.average,
@@ -103,7 +103,7 @@ const skills: Skill[] = [
     'Mdb',
     'vscode-icons/file-type-mongo',
     new Date(2022, 1, 6),
-    'Excelent for simplify development process.'
+    'And Impresive tool for me, I use it as a database motor when low latency is fundamental. I know how to work with Mongoose Library , but also I"m interested to test anothers with promising ORM as Prisma'
   ),
   new Skill(
     Level.basic,
@@ -112,7 +112,7 @@ const skills: Skill[] = [
     'Psql',
     'logos/postgresql',
     new Date(2021, 3, 31),
-    'If we talk about SQL databases, this is my core'
+    'As an Engineer, SQL is a base and fundamental knowledge to process data analisys, and when solution"s requirements is focused on engineering.'
   ),
   new Skill(
     Level.average,
