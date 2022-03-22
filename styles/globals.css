@@ -11,7 +11,7 @@ body {
   --background-light: var(--primary-dark);
   --primary-light: #151530;
   --secondary-light: #395c91;
-  --caption-light: #b5b9c2;
+  --caption-light: #e9ecef;
   --decoA-light: rgb(85, 174, 233);
   --decoB-light: rgb(133, 139, 187);
   /*developer assist*/
@@ -345,9 +345,9 @@ article {
   position: relative;
   left: 0;
   border-radius: 1px 20px 20px 1px;
-  animation: barGrow 0.75s ease-out 1;
+  animation: barAnimation 1.5s ease-out 1;
 }
-@keyframes barGrow {
+@keyframes barAnimation {
   0% {
     transform: translateX(-100px);
   }
@@ -359,7 +359,7 @@ article {
 @media (orientation: portrait), (min-height: 800px) {
   .bar {
     height: 5px;
-    animation: barGrow 0.75s ease-out 1;
+    animation: barAnimation 0.75s ease-out 1;
   }
 }
 
