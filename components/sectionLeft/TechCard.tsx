@@ -20,11 +20,21 @@ export const TechCard = (props: Props) => {
     <article>
       {props.children}
       <ul>
-        {props.techList?.map((e, i) => {
-          if (e.types === props.filter) {
-            return <Meter key={i} element={e} />;
-          }
-        })}
+        {props.techList
+          ?.sort((a, b) => {
+            if (a.constructor.name === 'Skill') {
+              const [e1, e2] = [a as Skill, b as Skill];
+              return e1.level > e2.level ? -1 : 1;
+            } else {
+              const [e1, e2] = [a as Interest, b as Interest];
+              return e1.interest - e2.interest ? -1 : 1;
+            }
+          })
+          .map((e, i) => {
+            if (e.types === props.filter) {
+              return <Meter key={i} element={e} />;
+            }
+          })}
       </ul>
     </article>
   );
