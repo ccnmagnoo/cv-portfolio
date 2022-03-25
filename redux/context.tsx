@@ -1,6 +1,7 @@
 import React from 'react';
 import { AppState } from '../model/AppState.interface';
-import { appReducer, darkMode, initialState, lightMode } from './reducer';
+import { initialState } from './appState';
+import { appReducer, darkMode, lightMode } from './reducer';
 
 //app context
 export const AppContext = React.createContext(initialState);
