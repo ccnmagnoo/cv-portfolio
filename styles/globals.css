@@ -156,6 +156,7 @@ a {
 }
 /*🌞 light mode*/
 .light .bigSwitch .lever {
+  border-radius: 1000px;
   background-color: var(--secondary-light);
   left: calc(var(--switchW) - var(--switchH));
 }
@@ -313,6 +314,9 @@ article {
   list-style: none;
   cursor: pointer;
 }
+.meter:hover {
+  font-weight: bold;
+}
 
 .meter .container {
   font-size: var(--font-size);
@@ -345,7 +349,7 @@ article {
   position: relative;
   left: 0;
   border-radius: 1px 20px 20px 1px;
-  animation: barAnimation 1.5s ease-out 1;
+  animation: barAnimation 2s ease-out;
 }
 @keyframes barAnimation {
   0% {
@@ -395,20 +399,27 @@ article {
   --dialog-width: 120px;
   font-size: 0.65rem;
 
-  display: none;
+  display: block;
   position: absolute;
   right: calc((var(--dialog-width) + 10px) * -1);
   top: 0;
-  transition: all 0.5s ease-in-out;
   max-width: var(--dialog-width);
   min-height: 50px;
   text-align: start;
   padding: 0.4rem;
-  border-radius: 2px;
+  border-radius: 5px;
   z-index: 3;
   backdrop-filter: blur(3px);
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   text-transform: none;
+  transition: 250ms ease-in-out;
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.meter:hover .commentDialog {
+  display: block;
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 .dark .meter .commentDialog {
@@ -418,9 +429,13 @@ article {
   background-color: var(--background-light);
 }
 
-.meter:hover .commentDialog {
-  display: block;
+@keyframes dialogIn {
+  100% {
+    transform: translateX(-0px);
+    opacity: 0;
+  }
 }
+
 /*dialog arrow*/
 .meter .commentDialog::after {
   --arrow-size: 8px;
