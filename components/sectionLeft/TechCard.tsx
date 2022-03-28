@@ -13,6 +13,7 @@ interface Props {
   children?: React.ReactNode;
   filter: TechType;
   techList?: Skill[] | Interest[];
+  position?: 'left' | 'right';
 }
 
 export const TechCard = (props: Props) => {
@@ -32,7 +33,7 @@ export const TechCard = (props: Props) => {
           })
           .map((e, i) => {
             if (e.types === props.filter) {
-              return <Meter key={i} element={e} />;
+              return <Meter key={i} element={e} position={props.position} />;
             }
           })}
       </ul>

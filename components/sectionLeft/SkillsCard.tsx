@@ -6,16 +6,16 @@ export const SkillsCard = () => {
   const skillList = context.skills;
   return (
     <section className='skillCard'>
-      <TechCard filter={'developer'} techList={skillList}>
+      <TechCard filter={'developer'} techList={skillList} position='left'>
         <h6>Relative skill set</h6>
       </TechCard>
-      <TechCard filter={'front-end'} techList={skillList}>
+      <TechCard filter={'front-end'} techList={skillList} position='left'>
         <h6>Front-end</h6>
       </TechCard>
-      <TechCard filter={'back-end'} techList={skillList}>
+      <TechCard filter={'back-end'} techList={skillList} position='left'>
         <h6>Back-end</h6>
       </TechCard>
-      <TechCard filter={'data-analytics'} techList={skillList}>
+      <TechCard filter={'data-analytics'} techList={skillList} position='left'>
         <h6>Data Analytics</h6>
       </TechCard>
     </section>

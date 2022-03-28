@@ -8,6 +8,7 @@ import { MeterContainer } from './MeterContainer';
 
 interface Props {
   element: Skill | Interest | undefined;
+  position?: 'left' | 'right';
 }
 
 export const Meter = (props: Partial<Props>) => {
@@ -24,6 +25,7 @@ export const Meter = (props: Partial<Props>) => {
             tag={e?.tech}
             logo={e.logo}
             update={e.update}
+            position={props.position}
           />
         );
       }
@@ -36,6 +38,7 @@ export const Meter = (props: Partial<Props>) => {
             value={e?.interest}
             tag={e?.tech}
             logo={e.logo}
+            position={props.position}
           />
         );
       }
@@ -63,7 +66,7 @@ export const Meter = (props: Partial<Props>) => {
       {/**
        * @function MeterContainer > @function MeterBox > @function MeterBar
        */}
-      <MeterContainer>
+      <MeterContainer position={props.position}>
         {/*tech headers 🎩*/}
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
