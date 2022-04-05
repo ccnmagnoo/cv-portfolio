@@ -1,3 +1,4 @@
+import { Contact } from './Contact.inteface';
 import Hobby from './Hobby.interface';
 import Job from './Job.interface';
 import { Skill, Interest } from './Tech';
@@ -12,11 +13,7 @@ export interface AppState {
     description?: string /*no more than 20 words*/;
   };
   contact: {
-    email: string;
-    phone: string;
-    linkedIn: string;
-    github: string;
-    freecodecamp: string;
+    [id: string]: Contact;
   };
 
   skills?: Skill[];
