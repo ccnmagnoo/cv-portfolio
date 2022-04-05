@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppState } from '../model/AppState.interface';
-import { initialState } from './appState';
+import { initialState } from '../assets/appState';
 import { appReducer, darkMode, lightMode } from './reducer';
 
 //app context
