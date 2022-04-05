@@ -7,7 +7,6 @@ import { InterestPanel } from './InterestPanel';
 export const InfoPanel = () => {
   return (
     <section className={st.panel}>
-      <div>Info InfoPanel</div>
       <BaseInfo />
       <ContactInfo />
       <InterestPanel />
