@@ -11,8 +11,13 @@ export const ContactItem = (props: Props) => {
   const { item } = props;
 
   return (
-    <a className='contact' href={item?.address} target='_blank' rel='noreferrer'>
-      <img src={item?.icon!} alt='logo' />
-    </a>
+    <div className='contact'>
+      <a href={item?.address} target='_blank' rel='noreferrer'>
+        <div
+          className='ico'
+          style={{ backgroundImage: `url(${item?.icon!}?color=white)` }}
+        />
+      </a>
+    </div>
   );
 };

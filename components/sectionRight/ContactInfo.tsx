@@ -9,7 +9,6 @@ export const ContactInfo = () => {
   return (
     <article className='contactPanel'>
       <ContactItem item={contact?.email} />
-
       <ContactItem item={contact?.whatsapp} />
       <ContactItem item={contact?.linkedIn} />
     </article>

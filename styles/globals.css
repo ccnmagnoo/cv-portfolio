@@ -484,3 +484,53 @@ article {
 .light .meter .commentDialog::after {
   border-right: var(--arrow-size) solid var(--secondary-light);
 }
+
+.contactPanel {
+  --logoSize: 20px;
+  --logoPlate: 16px; /*size increase*/
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* links container 🔗 */
+.contactPanel .contact {
+  position: relative;
+  display: flex;
+  padding: 5px;
+  border-radius: 100%;
+  width: calc(var(--logoSize) + var(--logoPlate));
+  height: calc(var(--logoSize) + var(--logoPlate));
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all ease-in-out;
+}
+
+.contact:hover {
+  transform: scale(1.1);
+  transition: 0.2s all ease-in-out;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.dark .contact {
+  border: 2px solid var(--secondary-dark);
+}
+.light .contact {
+  border: 2px solid var(--decoB-light);
+}
+.contact .ico {
+  width: var(--logoSize);
+  height: var(--logoSize);
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--logoSize);
+  transition: 0.2s all ease-in-out;
+}
+
+.dark .contact .ico {
+  filter: brightness(0.5) sepia(2) hue-rotate(10deg) saturate(5);
+}
+
+.light .contact .ico {
+  filter: brightness(0.45) sepia(1) hue-rotate(180deg) saturate(1);
+}
