@@ -11,7 +11,7 @@ import { Meter } from '../meter/Meter';
  */
 interface Props {
   children?: React.ReactNode;
-  filter: TechType;
+  filter?: TechType;
   techList?: Skill[] | Interest[];
   position?: 'left' | 'right';
 }
@@ -32,6 +32,9 @@ export const TechCard = (props: Props) => {
             }
           })
           .map((e, i) => {
+            if (props.filter === undefined) {
+              return <Meter key={i} element={e} position={props.position} />;
+            }
             if (e.types === props.filter) {
               return <Meter key={i} element={e} position={props.position} />;
             }
