@@ -52,7 +52,7 @@ a {
 }
 
 .header {
-  /*border: var(--border);*/
+  /* border: var(--border); */
   display: flex;
   flex-direction: row;
   min-height: 3rem;
@@ -63,7 +63,7 @@ a {
   padding: 5px;
 }
 .main {
-  /*border: var(--border);*/
+  /* border: var(--border); */
   position: relative;
   min-height: 82vh;
   padding: 4rem 0;
@@ -84,7 +84,7 @@ a {
 }
 
 .footer {
-  /*border: var(--border);*/
+  /* border: var(--border); */
   display: flex;
   flex: 1;
   padding: 1rem 0;
@@ -266,8 +266,12 @@ a {
   }
 }
 
+ul,
+article {
+  padding: 0;
+}
 /*Left Section*/
-.skillCard {
+.leftPanel {
   /* border: var(--border); */
   display: -ms-flexbox;
   position: absolute;
@@ -279,18 +283,13 @@ a {
   padding: 0px;
   border-radius: 2px;
 }
-.skillCard ul,
-article {
-  padding: 0;
-}
-.skillCard h6 {
-  /* border: var(--border); */
+.leftPanel h6 {
   margin: 0 0 -12px 0;
   padding: 0;
 }
 
 @media (max-width: 800px) {
-  .skillCard {
+  .leftPanel {
     /* border: var(--border); */
     position: relative;
     display: flex;
@@ -300,12 +299,12 @@ article {
     justify-content: center;
     top: 50px;
   }
-  .skillCard article {
+  .leftPanel article {
     padding: 5px;
   }
 }
 
-/* Meter Measure */
+/* Meter Measure 📶 */
 .meter {
   --font-size: 0.8rem;
   color: var(--caption-dark);
@@ -425,8 +424,7 @@ article {
 .meter .commentDialog {
   --dialog-width: 120px;
   font-size: 0.65rem;
-
-  display: block;
+  display: unset;
   position: absolute;
   right: calc((var(--dialog-width) + 10px) * -1);
   top: 0;
@@ -485,6 +483,8 @@ article {
   border-right: var(--arrow-size) solid var(--secondary-light);
 }
 
+/*Right Section*/
+
 .contactPanel {
   --logoSize: 20px;
   --logoPlate: 16px; /*size increase*/
@@ -533,4 +533,37 @@ article {
 
 .light .contact .ico {
   filter: brightness(0.45) sepia(1) hue-rotate(180deg) saturate(1);
+}
+
+/*right panel*/
+.rightPanel {
+  /* border: var(--border); */
+  position: absolute;
+  display: block;
+  right: 0;
+  margin: 2rem;
+  min-width: 200px;
+  align-items: right;
+  text-align: right;
+}
+
+.interestPanel {
+  /* border: var(--border); */
+  display: -ms-flexbox;
+  padding: 0;
+}
+@media (max-width: 800px) {
+  .rightPanel {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    right: unset;
+  }
+
+  .interestPanel {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+  }
 }

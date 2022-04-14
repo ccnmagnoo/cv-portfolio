@@ -1,0 +1,38 @@
+/*Left Section*/
+.skillCard {
+  /* border: var(--border); */
+  display: -ms-flexbox;
+  position: absolute;
+  left: 0;
+  transition: all 0.1s ease-in-out;
+  min-width: 180px; /*left panel width and METER width*/
+  min-height: auto;
+  margin: 2rem;
+  padding: 0px;
+  border-radius: 2px;
+}
+.skillCard ul,
+article {
+  padding: 0;
+}
+.skillCard h6 {
+  /* border: var(--border); */
+  margin: 0 0 -12px 0;
+  padding: 0;
+}
+
+@media (max-width: 800px) {
+  .skillCard {
+    /* border: var(--border); */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    left: 0;
+    justify-content: center;
+    top: 50px;
+  }
+  .skillCard article {
+    padding: 5px;
+  }
+}

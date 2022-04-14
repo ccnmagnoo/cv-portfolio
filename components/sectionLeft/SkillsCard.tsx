@@ -1,11 +1,12 @@
 import React from 'react';
 import { AppContext } from '../../redux/context';
 import { TechCard } from './TechCard';
+
 export const SkillsCard = () => {
   const context = React.useContext(AppContext);
   const skillList = context.skills;
   return (
-    <section className='skillCard'>
+    <section className='leftPanel'>
       <TechCard filter='developer' techList={skillList} position='left'>
         <h6>Relative skill set</h6>
       </TechCard>

@@ -11,11 +11,15 @@ export const InterestPanel = () => {
   );
 
   return (
-    <article className='interest'>
-      <h6>Current Interest</h6>
-      {splitted?.map((e, i) => {
-        return <TechCard key={i} techList={e} position='right' />;
-      })}
-    </article>
+    <>
+      <header>
+        <h6>Current Interest</h6>
+      </header>
+      <article className='interestPanel'>
+        {splitted?.map((e, i) => {
+          return <TechCard key={i} techList={e} position='right' />;
+        })}
+      </article>
+    </>
   );
 };
