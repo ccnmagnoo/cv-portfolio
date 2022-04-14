@@ -524,7 +524,7 @@ article {
   background-repeat: no-repeat;
   background-position: center;
   background-size: var(--logoSize);
-  transition: 0.2s all ease-in-out;
+  transition: 0.01s all ease-in-out;
 }
 
 .dark .contact .ico {
