@@ -9,7 +9,7 @@ body {
   --decoB-dark: rgb(241, 77, 12);
   /*light mode*/
   --background-light: var(--primary-dark);
-  --primary-light: #0d1d1f;
+  --primary-light: #0f2f33;
   --secondary-light: #269292;
   --caption-light: #e9ecef;
   --decoA-light: hsl(180, 78%, 43%);
@@ -59,6 +59,7 @@ a {
 .header {
   /* border: var(--border); */
   display: flex;
+  gap: 1em;
   flex-direction: row;
   min-height: 3rem;
   position: relative;
@@ -130,7 +131,7 @@ a {
   --leverSize: calc(var(--switchH) + var(--leverGap));
   color: var(--primary-dark);
   border-radius: 1000px;
-
+  border: solid 5px;
   position: relative;
   width: var(--switchW);
   height: var(--switchH);
@@ -140,6 +141,10 @@ a {
   box-shadow: inset -3px -3px 6px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
   z-index: 1;
+}
+
+.dark .bigSwitch {
+  border-color: rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 800px) {
   .bigSwitch {
@@ -151,7 +156,7 @@ a {
 
 .bigSwitch:hover {
   box-shadow: inset 0px 0px 6px 12px rgba(0, 0, 0, 0.2),
-    0 0 3px 3px rgba(255, 255, 255, 0.1);
+    0 0 5px 5px rgba(255, 255, 255, 0.1);
 }
 
 /*BS Lever 🏒*/
@@ -613,4 +618,27 @@ article {
     max-width: 600px;
     justify-content: center;
   }
+}
+
+#cv-container {
+  position: absolute;
+  display: flex;
+  justify-items: center;
+  width: min(585px, 100%);
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+#cv-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
