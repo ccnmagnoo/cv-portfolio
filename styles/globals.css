@@ -4,16 +4,16 @@ body {
   --background-dark: #1d2125;
   --primary-dark: #f4f4f5;
   --secondary-dark: #e5a531;
-  --caption-dark: #818387;
+  --caption-dark: #86898f;
   --decoA-dark: #e5a531;
   --decoB-dark: rgb(241, 77, 12);
   /*light mode*/
   --background-light: var(--primary-dark);
-  --primary-light: #151530;
-  --secondary-light: #395c91;
+  --primary-light: #0d1d1f;
+  --secondary-light: #269292;
   --caption-light: #e9ecef;
-  --decoA-light: rgb(85, 174, 233);
-  --decoB-light: rgb(133, 139, 187);
+  --decoA-light: hsl(180, 78%, 43%);
+  --decoB-light: hsl(184, 80%, 28%);
   /*developer assist*/
   --border: 1px dashed magenta;
 
@@ -40,13 +40,18 @@ a {
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
 }
 
 .dark {
+  background-image: url(https://cdn.discordapp.com/attachments/1054960334751928350/1060557746644189325/ccnmagnoo_peacefull_dark_fortest_3642a19f-94c6-4ae3-93f3-fc67aee45fbc.png);
   background-color: var(--background-dark);
   color: var(--primary-dark);
 }
 .light {
+  background-image: url(https://cdn.discordapp.com/attachments/1054960334751928350/1060552633431105616/ccnmagnoo_paradise_beach_calm_water_institutional_61782dd7-661a-4d44-9a9e-7c24adf3715d.png);
   background-color: var(--background-light);
   color: var(--primary-light);
 }
@@ -73,14 +78,26 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  backdrop-filter: blur(3px);
 }
 
-.container.dark .main {
+.dark .main {
   box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    120deg,
+    rgba(0, 0, 0, 0.699) 20%,
+    rgba(0, 0, 0, 0.425) 100%
+  );
+  background-blend-mode: darken;
 }
 
-.container.light .main {
+.light .main {
   box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(
+    170deg,
+    rgba(255, 255, 255, 0.788) 20%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
 }
 
 .footer {
@@ -107,8 +124,8 @@ a {
 
 /*bigSwitch base */
 .bigSwitch {
-  --switchW: 320px;
-  --switchH: 200px;
+  --switchW: 350px;
+  --switchH: 220px;
   --leverGap: 40px;
   --leverSize: calc(var(--switchH) + var(--leverGap));
   color: var(--primary-dark);
@@ -171,6 +188,16 @@ a {
   z-index: -1;
 
   animation: 5s leverRotate linear infinite;
+}
+
+#profile-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 200px;
 }
 
 .dark .bigSwitch .lever::after {
@@ -307,12 +334,20 @@ article {
 /* Meter Measure 📶 */
 .meter {
   --font-size: 0.8rem;
-  color: var(--caption-dark);
+
   /* border: var(--border); */
   position: relative;
   list-style: none;
   cursor: pointer;
 }
+
+.dark .meter {
+  color: var(--caption-dark);
+}
+.light .meter {
+  color: var(--primary-light);
+}
+
 .meter:hover {
   font-weight: bold;
 }

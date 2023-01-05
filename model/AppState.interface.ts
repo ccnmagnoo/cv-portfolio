@@ -9,7 +9,7 @@ export interface AppState {
   changeToLightMode: () => void;
   basicData: {
     name: string | string[] | { [key: string]: string };
-    profesion: string;
+    profession: string;
     description?: string /*no more than 20 words*/;
   };
   contact: {
