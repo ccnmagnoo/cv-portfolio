@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>Carlos&apos;s Profile</title>
-        <meta name='description' content='porfolio with Carlos Campos profile' />
+        <meta name='description' content='portfolio with Carlos Campos profile' />
         <link rel='icon' href='../../profileLogo.svg' />
       </Head>
       <>
