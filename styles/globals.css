@@ -408,7 +408,7 @@ article {
   height: 100%;
   position: absolute;
   border-radius: 20px;
-  width: 0;
+  width: 100%;
 }
 .bar.left {
   right: unset;
