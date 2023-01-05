@@ -9,38 +9,38 @@ const skills: Skill[] = [
     'TS',
     'logos/typescript-icon',
     new Date(2022, 2, 1),
-    "Current favorite language 🥇, a stronly type programing makes me feel more secure and comfortable with services I'm giving. Simply the best"
+    "Current favorite language 🥇, a strongly type programing makes me feel more secure and comfortable with services I'm giving. Simply the best"
   ),
   new Skill(
-    Level.skilled,
+    Level.specialist,
     'Kotlin',
     'developer',
     'KT',
     'logos/kotlin',
     new Date(2019, 6, 6),
-    'This lang was the second I learned, and basically teach me all a know about POO. Beautiful 🌞 Python alike sintax.'
+    'This lang was the second I learned, and basically teach me all a know about POO. Beautiful 🌞 Python alike syntax.'
   ),
   new Skill(
-    Level.average,
+    Level.expert,
     'Python',
     'developer',
     'Py',
     'logos/python',
     new Date(2017, 3, 1),
-    'Python will be always my first love 💘. Python was a fundamental tool for give smart soluctions to a complex and diverse engineering and data problems.'
+    'Python will be always my first love 💘. Python was a fundamental tool for give smart solutions to a complex and diverse engineering and data problems.'
   ),
   new Skill(
-    Level.basic,
+    Level.specialist,
     'Git',
     'developer',
     'Git',
     'logos/git-icon',
     new Date(2020, 7, 13),
-    'A "Must Need" tool. I use it in all my proyects, and know pretty well his basics features like: push, pull, fork and rebase.'
+    'A "Must Need" tool. I use it in all my projects, and know pretty well his basics features like: push, pull, fork and rebase.'
   ),
   /*Fron-end*/
   new Skill(
-    Level.skilled,
+    Level.specialist,
     'HTML5 && CSS3',
     'front-end',
     'Html',
@@ -84,11 +84,11 @@ const skills: Skill[] = [
     'Bs',
     'logos/bootstrap',
     new Date(2021, 3, 31),
-    'Beautiful & simple, also when i need more personalizable UI'
+    'Beautiful & simple, also when i need more personalize UI'
   ),
   /*Backend*/
   new Skill(
-    Level.specialist,
+    Level.expert,
     'Firebase',
     'back-end',
     'Fs',
@@ -103,10 +103,10 @@ const skills: Skill[] = [
     'Mdb',
     'vscode-icons/file-type-mongo',
     new Date(2022, 1, 6),
-    'And Impresive tool for me, I use it as a database motor when low latency is fundamental. I know how to work with Mongoose Library , but also I"m interested to test anothers with promising ORM as Prisma'
+    'And Impressive tool for me, I use it as a database motor when low latency is fundamental. I know how to work with Mongoose Library , but also I"m interested to test anothers with promising ORM as Prisma'
   ),
   new Skill(
-    Level.basic,
+    Level.specialist,
     'PostgreSQL',
     'back-end',
     'Psql',
@@ -115,7 +115,7 @@ const skills: Skill[] = [
     'As an Engineer, SQL is a base and fundamental knowledge to process data analisys, and when solution"s requirements is focused on engineering.'
   ),
   new Skill(
-    Level.average,
+    Level.skilled,
     'REST Express',
     'back-end',
     'Ex',
