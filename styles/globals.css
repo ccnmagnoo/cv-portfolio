@@ -405,7 +405,6 @@ article {
   background-color: var(--caption-light);
 }
 .bar {
-  content: 'hola';
   height: 100%;
   position: absolute;
   border-radius: 20px;

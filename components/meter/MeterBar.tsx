@@ -21,6 +21,7 @@ export const MeterBar = (props: Partial<Props>) => {
     <div
       className={`bar ${position ?? 'left'}`}
       style={{ width: `${relativeSize}%` }}
+
       // data-width={`${relativeSize}%`}
     ></div>
   );
