@@ -160,7 +160,7 @@ a {
   width: var(--leverSize);
   height: var(--leverSize);
   position: absolute;
-  transition: all 0.4s ease-in-out;
+  transition: left 1s ease-in-out;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -198,10 +198,19 @@ a {
   height: 100%;
   overflow: hidden;
   border-radius: 200px;
+  transition: all 1s ease-in-out;
+  transform: unset;
 }
 .dark #profile-image {
   background-image: url(../assets/profile-dark.png);
-  filter: grayscale(50%) brightness(0.9) contrast(200%);
+  transform: scaleX(-1);
+  filter: brightness(0.9) contrast(200%) saturate(20%);
+}
+
+.light #profile-image {
+  background-image: url(../assets/profile-light.png);
+  transform: scaleX(1);
+  filter: brightness(110%) contrast(120%) saturate(140%);
 }
 .dark .bigSwitch .lever::after {
   background-image: linear-gradient(to right, var(--decoA-dark), var(--decoB-dark));
@@ -553,7 +562,7 @@ article {
   border: 2px solid var(--secondary-dark);
 }
 .light .contact {
-  border: 2px solid var(--decoB-light);
+  border: 2px solid white;
 }
 .contact .ico {
   width: var(--logoSize);
@@ -570,7 +579,7 @@ article {
 }
 
 .light .contact .ico {
-  filter: brightness(0.45) sepia(1) hue-rotate(180deg) saturate(1);
+  filter: brightness(0.98) sepia(1) hue-rotate(100deg) saturate(1.4);
 }
 
 /*right panel*/
