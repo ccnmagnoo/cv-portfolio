@@ -1,4 +1,5 @@
 import { NextComponentType } from 'next';
+import Image from 'next/image';
 import React from 'react';
 import { AppContext } from '../../redux/context';
 import { Card } from './card';
@@ -10,7 +11,9 @@ const BigSwitch: NextComponentType = () => {
 
   return (
     <section className='bigSwitch'>
-      <Lever>I&#39;m a Lever</Lever>
+      <Lever>
+        <div id='profile-image'>img</div>
+      </Lever>
 
       <Card>
         <h4>
@@ -19,7 +22,7 @@ const BigSwitch: NextComponentType = () => {
         <h4>
           {father} {mother}
         </h4>
-        <p>{context.basicData?.profesion}</p>
+        <p>{context.basicData?.profession}</p>
       </Card>
     </section>
   );
