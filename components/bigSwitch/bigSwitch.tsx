@@ -1,18 +1,19 @@
-import { NextComponentType } from 'next';
-import Image from 'next/image';
-import React from 'react';
-import { AppContext } from '../../redux/context';
-import { Card } from './card';
-import Lever from './lever';
+import { NextComponentType } from "next";
+import Image from "next/image";
+import React from "react";
+import { AppContext } from "../../redux/context";
+import { Card } from "./card";
+import Lever from "./lever";
 
 const BigSwitch: NextComponentType = () => {
   const context = React.useContext(AppContext);
-  const [first, second, father, mother]: string[] = context.basicData?.name as string[];
+  const [first, second, father, mother]: string[] = context.basicData
+    ?.name as string[];
 
   return (
-    <section className='bigSwitch'>
+    <section className="bigSwitch">
       <Lever>
-        <div id='profile-image'>img</div>
+        <div id="profile-image" />
       </Lever>
 
       <Card>
