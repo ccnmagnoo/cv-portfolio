@@ -1,6 +1,14 @@
-import React from 'react';
-import st from '../styles/Home.module.css';
+import React from "react";
+import { AppContext } from "../redux/context";
+import { ContactItem } from "./sectionRight/ContactItem";
 
 export const Footer = () => {
-  return <footer className='footer'>footer</footer>;
+  const context = React.useContext(AppContext);
+  const { contact } = context;
+  return (
+    <footer className="footer">
+      <ContactItem item={contact?.gitHub} />
+      {contact?.gitHub?.contact}
+    </footer>
+  );
 };
