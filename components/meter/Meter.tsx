@@ -15,6 +15,7 @@ export const Meter = (props: Partial<Props>) => {
 
   /**@function meter return Bar jsx */
   const getMeterBar = (m: Skill | Interest | undefined) => {
+    console.log('constructing meterBar from:',typeof m)
     if(m?.constructor.name === 'Skill'){
       const e = m as Skill;
         return (
@@ -80,10 +81,11 @@ export const Meter = (props: Partial<Props>) => {
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
         {getMeterBar(props.element)}
+        {comments(props.element)}
         <div className="meterBox">
           {getMeterBar(props.element)}
-        </div>
         {comments(props.element)}
+        </div>
       </MeterContainer>
 
   );
