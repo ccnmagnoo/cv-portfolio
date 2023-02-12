@@ -1,9 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import { Interest, InterestLevel, Skill, SkillLevel } from '../../model/Tech';
-import { useComments } from './Comments';
 import { MeterBar } from './MeterBar';
-import { MeterBox } from './MeterBox';
 import { MeterContainer } from './MeterContainer';
 
 interface Props {
@@ -59,7 +57,7 @@ export const Meter = (props: Partial<Props>) => {
       return undefined;
     }
   };
-  const comments = (m:Skill|Interest|undefined)=>{
+  const comments = (e:Skill|Interest|undefined)=>{
       if (e?.constructor.name === 'Skill') {
         const element = e as Skill;
         return (
