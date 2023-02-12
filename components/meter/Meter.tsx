@@ -12,6 +12,7 @@ interface Props {
 
 export const Meter = (props: Partial<Props>) => {
   console.log('element recieve in meter comp:',typeof props.element);
+
   /**@function meter return Bar jsx */
   const getMeterBar = (m: Skill | Interest | undefined) => {
     if(m?.constructor.name === 'Skill'){
@@ -75,12 +76,10 @@ export const Meter = (props: Partial<Props>) => {
   return (
   
       <MeterContainer position={props.position}>
-      {/**
-       * @function MeterContainer > @function MeterBox > @function MeterBar
-       */}
         {/*tech headers 🎩*/}
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
+        {getMeterBar(props.element)}
         {getMeterBar(props.element)}
         {comments(props.element)}
       </MeterContainer>
