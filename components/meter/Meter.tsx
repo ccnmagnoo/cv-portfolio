@@ -3,6 +3,7 @@ import React from 'react';
 import { Interest, InterestLevel, Skill, SkillLevel } from '../../model/Tech';
 import { MeterBar } from './MeterBar';
 import { MeterContainer } from './MeterContainer';
+import moment from 'moment';
 
 interface Props {
   element: Skill | Interest | undefined;
