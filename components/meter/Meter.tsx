@@ -42,18 +42,10 @@ export const Meter = (props: Partial<Props>) => {
           />
         );
       }
-      default:
-        return (
-          <MeterBar
-            min={1}
-            max={SkillLevel.expert}
-            value={e?.level}
-            tag={e?.tech}
-            logo={e.logo}
-            update={e.update}
-            position={props.position}
-          />
-        );
+      default:{
+        console.error('not interest or skill set')
+        return undefined
+      };
     }
   };
   /**
