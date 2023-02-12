@@ -43,7 +43,7 @@ export const Meter = (props: Partial<Props>) => {
         );
       }
       default:{
-        console.error('not interest or skill set')
+        console.error('not Interest or Skill set at',props.element?.constructor.name)
         return undefined
       };
     }
