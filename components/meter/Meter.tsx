@@ -64,17 +64,17 @@ export const Meter = (props: Partial<Props>) => {
   const comments = useComments(props.element);
 
   return (
-    <li className='meter'>
+  
+      <MeterContainer position={props.position}>
       {/**
        * @function MeterContainer > @function MeterBox > @function MeterBar
        */}
-      <MeterContainer position={props.position}>
         {/*tech headers 🎩*/}
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
         <MeterBox>{getMeterBar(props.element)}</MeterBox>
         {comments}
       </MeterContainer>
-    </li>
+
   );
 };

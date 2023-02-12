@@ -33,10 +33,14 @@ export const TechCard = (props: Props) => {
           })
           .map((e, i) => {
             if (props.filter === undefined) {
-              return <Meter key={i} element={e} position={props.position} />;
+              return  <li className='meter' key={i}>
+                <Meter element={e} position={props.position} />;
+              </li>
             }
             if (e.types === props.filter) {
-              return <Meter key={i} element={e} position={props.position} />;
+              return  <li className='meter' key={i}>
+              <Meter element={e} position={props.position} />;
+            </li>
             }
           })}
       </ul>
