@@ -61,12 +61,12 @@ export const Meter = (props: Partial<Props>) => {
   };
   const comments = (e:Skill|Interest|undefined)=>{
       if (e?.constructor.name === 'Skill') {
-        const element = e as Skill;
+        const skill = e as Skill;
         return (
           <article className='commentDialog'>
             <h6>last update</h6>
-            <p>{moment(element.update).startOf('day').fromNow()}</p>
-            <p>{element.comment}</p>
+            <p>{moment(skill.update).startOf('day').fromNow()}</p>
+            <p>{skill.comment}</p>
           </article>
         );
       } 
@@ -80,7 +80,9 @@ export const Meter = (props: Partial<Props>) => {
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
         {getMeterBar(props.element)}
-        {getMeterBar(props.element)}
+        <div className="meterBox">
+          {getMeterBar(props.element)}
+        </div>
         {comments(props.element)}
       </MeterContainer>
 
