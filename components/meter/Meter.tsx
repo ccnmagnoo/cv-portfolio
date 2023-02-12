@@ -12,11 +12,11 @@ interface Props {
 }
 
 export const Meter = (props: Partial<Props>) => {
+  console.log('element recieve in meter comp:',typeof props.element);
   /**@function meter return Bar jsx */
   const getMeterBar = (m: Skill | Interest | undefined) => {
-    switch (m?.constructor.name) {
-      case 'Skill': {
-        const e = m as Skill;
+    if(m?.constructor.name === 'Skill'){
+      const e = m as Skill;
         return (
           <MeterBar
             min={1}
@@ -27,10 +27,11 @@ export const Meter = (props: Partial<Props>) => {
             update={e.update}
             position={props.position}
           />
-        );
-      }
-      case 'Interest': {
-        const e = m as Interest;
+        ); 
+    };
+
+    if(m?.constructor.name === 'Interest'){
+      const e = m as Interest;
         return (
           <MeterBar
             min={1}
@@ -40,14 +41,11 @@ export const Meter = (props: Partial<Props>) => {
             logo={e.logo}
             position={props.position}
           />
-        );
-      }
-      default:{
-        console.error('not Interest or Skill set at',props.element?.constructor.name)
-        return undefined
-      };
-    }
+        ); 
+    };
+    return undefined
   };
+
   /**
    * @function getUpdate
    * @param m {Skill|Insteres|undefined}
