@@ -70,6 +70,7 @@ export const Meter = (props: Partial<Props>) => {
         {/*tech headers 🎩*/}
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
+        {getMeterBar(props.element)}
         <MeterBox>{getMeterBar(props.element)}</MeterBox>
         {comments}
       </MeterContainer>
