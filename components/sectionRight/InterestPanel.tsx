@@ -5,7 +5,7 @@ import { TechCard } from "../sectionLeft/TechCard";
 
 export const InterestPanel = () => {
   const { interest } = React.useContext(AppContext);
-  console.log('number of interest passed:',interest?.lenght)
+  console.log('number of interest passed:',interest?.length)
   const splitted = splitter(interest, 2);
 
   return (
