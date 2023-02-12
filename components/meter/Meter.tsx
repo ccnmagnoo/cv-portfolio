@@ -13,7 +13,7 @@ interface Props {
 
 export const Meter = (props: Partial<Props>) => {
   /**@function meter return Bar jsx */
-  const getMeterBar = (m: typeof props.element) => {
+  const getMeterBar = (m: Skill | Interest | undefined) => {
     switch (m?.constructor.name) {
       case 'Skill': {
         const e = m as Skill;
