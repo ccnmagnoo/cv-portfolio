@@ -59,7 +59,19 @@ export const Meter = (props: Partial<Props>) => {
       return undefined;
     }
   };
-  const comments = useComments(props.element);
+  const comments = (m:Skill|Interest|undefined)=>{
+      if (e?.constructor.name === 'Skill') {
+        const element = e as Skill;
+        return (
+          <article className='commentDialog'>
+            <h6>last update</h6>
+            <p>{moment(element.update).startOf('day').fromNow()}</p>
+            <p>{element.comment}</p>
+          </article>
+        );
+      } 
+      return undefined
+  };
 
   return (
   
@@ -70,9 +82,10 @@ export const Meter = (props: Partial<Props>) => {
         {/*tech headers 🎩*/}
         <img src={props.element?.logo} alt='' /> {props.element?.tech}
         {/*colored meter bar 📶 */}
+        <div className='box'>
         {getMeterBar(props.element)}
-        <MeterBox>{getMeterBar(props.element)}</MeterBox>
-        {comments}
+        </div>
+        {comments(props.element)}
       </MeterContainer>
 
   );
