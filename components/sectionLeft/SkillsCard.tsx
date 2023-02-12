@@ -4,7 +4,7 @@ import { TechCard } from './TechCard';
 
 export const SkillsCard = () => {
   const context = React.useContext(AppContext);
-  console.log("number of skills passed",context.skills.lenght);
+  console.log("number of skills passed",context?.skills?.lenght);
   const skillList = context.skills;
   return (
     <section className='leftPanel'>
