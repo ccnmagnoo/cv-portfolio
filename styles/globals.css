@@ -399,18 +399,18 @@ article {
 }
 
 /* meter Box */
-.meter .container .box {
+.meterBox {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 2.5px;
 }
-.dark .meter .container .box {
+.dark .meterBox {
   /* border: 0.5px solid var(--secondary-dark); */
   background-color: black;
 }
-.light .meter .container .box {
+.light .meterBox {
   /* border: 0.5px solid var(--secondary-light); */
   background-color: var(--caption-light);
 }
@@ -482,7 +482,7 @@ article {
 }
 
 /* Comment dialog in skill constainer 📨 */
-.meter .commentDialog {
+.commentDialog {
   --dialog-width: 120px;
   font-size: 0.65rem;
   display: unset;
@@ -508,10 +508,10 @@ article {
   transform: translateX(0px);
 }
 
-.dark .meter .commentDialog {
+.dark .commentDialog {
   background-color: rgba(0, 0, 0, 0.6);
 }
-.light .meter .commentDialog {
+.light .commentDialog {
   background-color: var(--background-light);
 }
 
