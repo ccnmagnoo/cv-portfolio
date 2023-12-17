@@ -8,11 +8,11 @@ import { InfoPanel } from '../components/sectionRight/InfoPanel';
 const Home: NextPage = () => {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Carlos&apos;s Profile</title>
         <meta name='description' content='portfolio with Carlos Campos profile' />
         <link rel='icon' href='../../profileLogo.svg' />
-      </Head>
+      </Head> */}
       <>
         <BigSwitch />
         <SkillsCard />
